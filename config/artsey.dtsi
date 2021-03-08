@@ -52,6 +52,7 @@
 *****************************************/
 //#define ARTSEY_RIGHT 1
 //#define ARTSEY_LEFT 1
+//#define ARTSEY_BIG 1
 
 /*****************************************
  * Define key positions used for combos
@@ -82,6 +83,11 @@
 // #define LEADING_NONES NONE(0, 1, 0)
 // #define MIDDLE_NONES NONE(0, 0, 3)
 // #define TRAILING_NONES NONE(0, 1, 0)
+// #define BIG_LEADING_NONES NONE(0, 0, 0)
+// #define BIG_BETWEEN_ROW_ONE_TWO_NONES NONE(0, 0, 0)
+// #define BIG_BETWEEN_ROW_TWO_THREE_NONES NONE(0, 0, 0)
+// #define BIG_BETWEEN_ROW_THREE_THUMBS NONE(0, 0, 0)
+// #define BIG_TRAILING_NONES NONE(0, 0, 0)
 
 /*****************************************
  * Define custom layer
@@ -130,7 +136,8 @@
 #define LAYER_ID_F_ONE_SIX 5
 #define LAYER_ID_F_SEVEN_TWELVE 6
 #define LAYER_ID_CUSTOM 7
-#define LAYER_ID_MOUSE 8
+#define LAYER_ID_BIG_SYM 8
+#define LAYER_ID_MOUSE 9
 
 /*****************************************
  * Define how long it takes for the combos/holds to 'time out'
@@ -273,6 +280,22 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
+		#if defined ARTSEY_BIG
+		base {
+			label = "*ARTSEY*";
+			bindings = <
+				BIG_LEADING_NONES
+				&kp MINUS            &layer_parentheticals_kp LAYER_ID_PARENTHETICALS A    &kp R     &kp T     &layer_numbers_kp LAYER_ID_NUMBERS S
+				BIG_BETWEEN_ROW_ONE_TWO_NONES
+				&kp TAB              &layer_symbols_kp LAYER_ID_SYMBOLS E                  &kp Y     &kp I     &layer_navigation_kp LAYER_ID_NAVIGATION O
+				BIG_BETWEEN_ROW_TWO_THREE_NONES
+				&kp LSHFT            &kp LCTRL                                             &kp DEL   &kp EQUAL &kp AT
+				BIG_BETWEEN_ROW_THREE_THUMBS
+				&mo LAYER_ID_BIG_SYM &kp ENTER                                             &kp SPACE
+				BIG_TRAILING_NONES
+			>;
+		};
+		#else
 		base {
 			label = "ARTSEY";
 			bindings = <
@@ -283,6 +306,7 @@
 				TRAILING_NONES
 			>;
 		};
+		#endif
 		numbers {
 			label = "Number";
 			bindings = <
@@ -344,6 +368,22 @@
 			>;
 		};
 		ARTSEY_LAYER_CUSTOM
+		#if defined ARTSEY_BIG
+		big_artsey {
+			label = "*Symbol*";
+			bindings = <
+				BIG_LEADING_NONES
+				&kp GRAVE &kp HASH  &kp LBRC &kp RBRC &kp CARET
+				BIG_BETWEEN_ROW_ONE_TWO_NONES
+				&kp BSLH  &kp DLLR  &kp LPAR &kp RPAR &kp AMPS
+				BIG_BETWEEN_ROW_TWO_THREE_NONES
+				&kp PIPE  &kp PRCNT &kp LBKT &kp RBKT &kp ASTRK
+				BIG_BETWEEN_ROW_THREE_THUMBS
+				&trans    &kp SEMI  &none
+				BIG_TRAILING_NONES
+			>;
+		};
+		#endif
 		// mouse { /* TODO: Not implemented yet, needs mouse keys in upstream */
 		// 	label = "Mouse";
 		// 	bindings = <
@@ -363,6 +403,22 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
+		#if defined ARTSEY_BIG
+		base {
+			label = "*ARTSEY*";
+			bindings = <
+				BIG_LEADING_NONES
+				&layer_numbers_kp LAYER_ID_NUMBERS S                             &kp T     &kp R     &layer_parentheticals_kp LAYER_ID_PARENTHETICALS A &kp MINUS
+				BIG_BETWEEN_ROW_ONE_TWO_NONES
+				&layer_navigation_kp LAYER_ID_NAVIGATION O                       &kp I     &kp Y     &layer_symbols_kp LAYER_ID_SYMBOLS E               &kp TAB
+				BIG_BETWEEN_ROW_TWO_THREE_NONES
+				&kp LSHFT                                                        &kp LCTRL &kp DEL   &kp EQUAL                                          &kp AT
+				BIG_BETWEEN_ROW_THREE_THUMBS
+				&mo LAYER_ID_BIG_SYM                                             &kp ENTER &kp SPACE
+				BIG_TRAILING_NONES
+			>;
+		};
+		#else
 		base {
 			label = "ARTSEY";
 			bindings = <
@@ -373,6 +429,7 @@
 				TRAILING_NONES
 			>;
 		};
+		#endif
 		numbers {
 			label = "Number";
 			bindings = <
@@ -434,6 +491,22 @@
 			>;
 		};
 		ARTSEY_LAYER_CUSTOM
+		#if defined ARTSEY_BIG
+		big_artsey {
+			label = "*Symbol*";
+			bindings = <
+				BIG_LEADING_NONES
+				&kp CARET &kp LBRC &kp RBRC &kp HASH  &kp GRAVE
+				BIG_BETWEEN_ROW_ONE_TWO_NONES
+				&kp AMPS  &kp LPAR &kp RPAR &kp DLLR  &kp BSLH
+				BIG_BETWEEN_ROW_TWO_THREE_NONES
+				&kp ASTRK &kp LBKT &kp RBKT &kp PRCNT &kp PIPE
+				BIG_BETWEEN_ROW_THREE_THUMBS
+				&none     &kp SEMI &none
+				BIG_TRAILING_NONES
+			>;
+		};
+		#endif
 		// mouse { /* TODO: Not implemented yet, needs mouse keys in upstream */
 		// 	label = "Mouse";
 		// 	bindings = <
