@@ -135,7 +135,8 @@
 #define LAYER_ID_NAVIGATION 4
 #define LAYER_ID_CUSTOM 5
 #define LAYER_ID_BIG_SYM 6
-#define LAYER_ID_MOUSE 7
+#define LAYER_ID_BIG_FUNCTION 7
+#define LAYER_ID_MOUSE 8
 
 /*****************************************
  * Define how long it takes for the combos/holds to 'time out'
@@ -149,6 +150,9 @@
 #endif
 &sk {
 	release-after-ms = <1000>;
+};
+&sl { 
+	release-after-ms = <2000>;
 };
 
 /*****************************************
@@ -199,6 +203,7 @@
 		combo_bt_nxt { key-positions = <KEY_A KEY_E KEY_S KEY_O>; bindings = <&bt BT_NXT>; };
 		combo_bt_clr { key-positions = <KEY_R KEY_Y KEY_T KEY_I>; bindings = <&bt BT_CLR>; };
 		combo_layer_navigation { key-positions = <KEY_R KEY_E KEY_I>; bindings = <&tog LAYER_ID_NAVIGATION>; };
+		combo_layer_functions { key-positions = <KEY_S KEY_O>; bindings = <&sl LAYER_ID_BIG_FUNCTION>; };
 		/* TODO: Setup/Enable once Mouse Keys feature(s) are added to ZMK */
 		//combo_mouse { timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_A KEY_T KEY_Y>; bindings = <&none>; };
 	};
@@ -308,7 +313,7 @@
 		};
 		ARTSEY_LAYER_CUSTOM
 		#if defined ARTSEY_BIG
-		big_artsey {
+		big_artsey_symbol {
 			label = "*Symbol*";
 			bindings = <
 				BIG_LEADING_NONES
@@ -319,6 +324,20 @@
 				&kp PIPE  &kp PRCNT &kp LBKT &kp RBKT &kp ASTRK
 				BIG_BETWEEN_ROW_THREE_THUMBS
 				&trans    &kp SEMI  &none
+				BIG_TRAILING_NONES
+			>;
+		};
+		big_artsey_function {
+			label = "*Func*";
+			bindings = <
+				BIG_LEADING_NONES
+				&none  &kp F1 &kp F2  &kp F3  &kp F4
+				BIG_BETWEEN_ROW_ONE_TWO_NONES
+				&none  &kp F5 &kp F6  &kp F7  &kp F8
+				BIG_BETWEEN_ROW_TWO_THREE_NONES
+				&none  &kp F9 &kp F10 &kp F11 &kp F12
+				BIG_BETWEEN_ROW_THREE_THUMBS
+				&trans &none   &none
 				BIG_TRAILING_NONES
 			>;
 		};
@@ -411,7 +430,7 @@
 		};
 		ARTSEY_LAYER_CUSTOM
 		#if defined ARTSEY_BIG
-		big_artsey {
+		big_artsey_symbol {
 			label = "*Symbol*";
 			bindings = <
 				BIG_LEADING_NONES
@@ -422,6 +441,20 @@
 				&kp ASTRK &kp LBKT &kp RBKT &kp PRCNT &kp PIPE
 				BIG_BETWEEN_ROW_THREE_THUMBS
 				&none     &kp SEMI &none
+				BIG_TRAILING_NONES
+			>;
+		};
+		big_artsey_function {
+			label = "*Func*";
+			bindings = <
+				BIG_LEADING_NONES
+				&kp F4  &kp F3  &kp F2  &kp F1  &none
+				BIG_BETWEEN_ROW_ONE_TWO_NONES
+				&kp F8  &kp F7  &kp F6  &kp F5  &none
+				BIG_BETWEEN_ROW_TWO_THREE_NONES
+				&kp F12 &kp F11 &kp F10 &kp F9 &none
+				BIG_BETWEEN_ROW_THREE_THUMBS
+				&none   &none   &none
 				BIG_TRAILING_NONES
 			>;
 		};
