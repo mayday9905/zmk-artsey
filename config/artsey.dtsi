@@ -246,7 +246,7 @@
 				BIG_LEADING_NONES
 				&kp MINUS            &layer_parentheticals_kp LAYER_ID_PARENTHETICALS A    &kp R     &kp T     &layer_numbers_kp LAYER_ID_NUMBERS S
 				BIG_BETWEEN_ROW_ONE_TWO_NONES
-				&kp TAB              &layer_symbols_kp LAYER_ID_SYMBOLS E                  &kp Y     &kp I     &layer_navigation_kp LAYER_ID_NAVIGATION O
+				&kp TAB              &layer_symbols_kp LAYER_ID_SYMBOLS E                  &kp Y     &kp I     &layer_custom_kp LAYER_ID_CUSTOM O
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
 				&kp LSHFT            &kp LCTRL                                             &kp DEL   &kp EQUAL &kp AT
 				BIG_BETWEEN_ROW_THREE_THUMBS
@@ -349,7 +349,7 @@
 				BIG_LEADING_NONES
 				&layer_numbers_kp LAYER_ID_NUMBERS S                             &kp T     &kp R     &layer_parentheticals_kp LAYER_ID_PARENTHETICALS A &kp MINUS
 				BIG_BETWEEN_ROW_ONE_TWO_NONES
-				&layer_navigation_kp LAYER_ID_NAVIGATION O                       &kp I     &kp Y     &layer_symbols_kp LAYER_ID_SYMBOLS E               &kp TAB
+				&layer_custom_kp LAYER_ID_CUSTOM O                               &kp I     &kp Y     &layer_symbols_kp LAYER_ID_SYMBOLS E               &kp TAB
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
 				&kp LSHFT                                                        &kp LCTRL &kp DEL   &kp EQUAL                                          &kp AT
 				BIG_BETWEEN_ROW_THREE_THUMBS
