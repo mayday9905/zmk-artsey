@@ -253,9 +253,9 @@
 				BIG_BETWEEN_ROW_ONE_TWO_NONES
 				&kp TAB              &layer_symbols_kp LAYER_ID_SYMBOLS E                  &kp Y     &kp I     &layer_custom_kp LAYER_ID_CUSTOM O
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
-				&sk LSHFT            &sk LCTRL                                             &kp DEL   &kp EQUAL &kp AT
+				&kp AT               &kp EQUAL                                             &kp DEL   &sk LCTRL &sk LSHFT
 				BIG_BETWEEN_ROW_THREE_THUMBS
-				&mo LAYER_ID_BIG_SYM &kp SPACE                                             &kp ENTER
+				&kp ENTER            &kp SPACE                                             &mo LAYER_ID_BIG_SYM
 				BIG_TRAILING_NONES
 			>;
 		};
