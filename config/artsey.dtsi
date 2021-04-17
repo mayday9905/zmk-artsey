@@ -194,7 +194,7 @@
 		combo_backspace { timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_E KEY_R>; bindings = <&kp BACKSPACE>; };
 		combo_shift { timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_E KEY_R KEY_T KEY_S>; bindings = <&sk LSHFT>; };
 		combo_space { timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_E KEY_Y KEY_I KEY_O>; bindings = <&kp SPACE>; };
-		combo_shift_lock { timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_R KEY_Y>; bindings = <&kp CAPS>; };
+		combo_shift_lock { timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_R KEY_Y>; bindings = <&kt LSHFT>; };
 		combo_caps_lock { layers = <LAYER_ID_BASE>; timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_O KEY_I KEY_Y KEY_A>; bindings = <&kp CAPS>; };
 		combo_seven { layers = <LAYER_ID_NUMBERS>; timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_A KEY_R>; bindings = <&kp N7>; };
 		combo_eight { layers = <LAYER_ID_NUMBERS>; timeout-ms = <TIMEOUT_COMBO>; key-positions = <KEY_R KEY_T>; bindings = <&kp N8>; };
@@ -253,7 +253,7 @@
 				BIG_BETWEEN_ROW_ONE_TWO_NONES
 				&kp TAB              &layer_symbols_kp LAYER_ID_SYMBOLS E                  &kp Y     &kp I     &layer_custom_kp LAYER_ID_CUSTOM O
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
-				&kp LSHFT            &kp LCTRL                                             &kp DEL   &kp EQUAL &kp AT
+				&sk LSHFT            &sk LCTRL                                             &kp DEL   &kp EQUAL &kp AT
 				BIG_BETWEEN_ROW_THREE_THUMBS
 				&mo LAYER_ID_BIG_SYM &kp SPACE                                             &kp ENTER
 				BIG_TRAILING_NONES
@@ -370,7 +370,7 @@
 				BIG_BETWEEN_ROW_ONE_TWO_NONES
 				&layer_custom_kp LAYER_ID_CUSTOM O                               &kp I     &kp Y     &layer_symbols_kp LAYER_ID_SYMBOLS E               &kp TAB
 				BIG_BETWEEN_ROW_TWO_THREE_NONES
-				&kp LSHFT                                                        &kp LCTRL &kp DEL   &kp EQUAL                                          &kp AT
+				&sk LSHFT                                                        &sk LCTRL &kp DEL   &kp EQUAL                                          &kp AT
 				BIG_BETWEEN_ROW_THREE_THUMBS
 				&mo LAYER_ID_BIG_SYM                                             &kp SPACE &kp ENTER
 				BIG_TRAILING_NONES
