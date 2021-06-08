@@ -127,8 +127,9 @@
 #define LAYER_ID_SYMBOLS 2
 #define LAYER_ID_PARENTHETICALS 3
 #define LAYER_ID_NAVIGATION 4
-#define LAYER_ID_CUSTOM 5
-#define LAYER_ID_MOUSE 6
+#define LAYER_ID_BT_SEL 5
+#define LAYER_ID_CUSTOM 6
+#define LAYER_ID_MOUSE 7
 
 /*****************************************
  * Define how long it takes for the combos/holds to 'time out'
