@@ -1,6 +1,0 @@
-if MARVTSEY
-
-config ZMK_KEYBOARD_NAME
-	default "Marvtsey"
-
-endif
